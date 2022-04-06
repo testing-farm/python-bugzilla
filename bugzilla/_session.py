@@ -40,8 +40,9 @@ class _BugzillaSession(object):
         if sslverify is False:
             self._session.verify = False
         self._session.headers["User-Agent"] = self._user_agent
-        self._session.params["Bugzilla_api_key"] = self._api_key
-        self._set_tokencache_param()
+        # self._session.params["Bugzilla_api_key"] = self._api_key
+        self._session.headers["Authorization"] = ("Bearer %s" % self._api_key)
+        # self._set_tokencache_param()
 
     def get_user_agent(self):
         return self._user_agent

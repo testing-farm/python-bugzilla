@@ -122,7 +122,7 @@ def _parse_requirements(fname):
 
 
 setup(
-    name='python-bugzilla',
+    name='tft-python-bugzilla',
     version=get_version(),
     description='Library and command line tool for interacting with Bugzilla',
     license="GPLv2",

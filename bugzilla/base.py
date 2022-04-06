@@ -524,7 +524,7 @@ class Bugzilla(object):
         version = self._backend.bugzilla_version()["version"]
         log.debug("Bugzilla version string: %s", version)
         self._set_bz_version(version)
-        self._init_class_from_url()
+        # self._init_class_from_url()
 
 
     @property

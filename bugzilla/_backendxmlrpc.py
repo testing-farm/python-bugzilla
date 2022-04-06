@@ -127,12 +127,12 @@ class _BugzillaXMLRPCProxy(ServerProxy, object):
         api_key = self.__bugzillasession.get_api_key()
         token_value = self.__bugzillasession.get_token_value()
 
-        if api_key is not None:
-            if 'Bugzilla_api_key' not in params[0]:
-                params[0]['Bugzilla_api_key'] = api_key
-        elif token_value is not None:
-            if 'Bugzilla_token' not in params[0]:
-                params[0]['Bugzilla_token'] = token_value
+        # if api_key is not None:
+        #     if 'Bugzilla_api_key' not in params[0]:
+        #         params[0]['Bugzilla_api_key'] = api_key
+        # elif token_value is not None:
+        #     if 'Bugzilla_token' not in params[0]:
+        #         params[0]['Bugzilla_token'] = token_value
 
         # pylint: disable=no-member
         ret = ServerProxy._ServerProxy__request(self, methodname, params)
